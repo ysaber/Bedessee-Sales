@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/upc"
+          android:actionLayout="@layout/menu_item_button"
+          android:actionViewClass="android.widget.Button"
+          android:title="UPC SEARCH"
+          android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/utils"
+          android:showAsAction="always"
+          android:title="@string/menu_item_utilities"
+          android:actionLayout="@layout/menu_item_select_store"
+          android:actionViewClass="com.thebedesseegroup.sales.customview.UtilitiesSpinner"/>
+
+    <item android:id="@+id/select_store"
+          android:showAsAction="always"
+          android:title="@string/menu_item_select_store"
+          android:actionLayout="@layout/menu_item_button"
+          android:actionViewClass="android.widget.Button"/>
+
+    <item android:id="@+id/shopping_cart"
+          android:actionLayout="@layout/menu_item_button"
+          android:actionViewClass="android.widget.Button"
+          android:title="@string/view_shopping_cart"
+          android:showAsAction="always" />
+
+    <item android:id="@+id/daily_update"
+          android:title="Daily Update"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/order_history"
+          android:title="Order History"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/sign_out"
+          android:icon="@drawable/ic_action_person"
+          android:title="Sign Out"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/exit"
+          android:icon="@drawable/ic_action_person"
+          android:title="Exit App"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/version"
+          android:icon="@drawable/ic_action_person"
+          android:title="vXXX"
+          android:showAsAction="never" />
+</menu>

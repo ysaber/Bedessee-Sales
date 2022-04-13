@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bedessee Imports</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Menu open</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="no_items_found">No items found!</string>
+    <string name="view_shopping_cart">View shopping cart</string>
+    <string name="shopping_cart_title">Shopping Cart</string>
+    <string name="switch_salesman">Switch salesman</string>
+    <string name="menu_item_utilities">Utilities</string>
+    <string name="menu_item_statuses">Status...</string>
+    <string name="menu_item_select_store">Select store</string>
+    <string name="menu_item_sell_sheets">Sell Sheets</string>
+    <string name="menu_item_update_product_info">Update Product Info</string>
+    <string name="menu_item_update_product_images">Update Product Images</string>
+    <string name="menu_item_update_product_images_update">Update Products</string>
+    <string name="menu_item_update_brands">Update Brands</string>
+    <string name="menu_item_update_brand_logos">Update Brand Logos</string>
+    <string name="menu_item_update_sell_sheets">Update Sell Sheets</string>
+    <string name="menu_item_update_salesman_store">Update Stores</string>
+
+    <string-array name="reports_array">
+        <item>REPORTS</item>
+        <item>Customer Stats</item>
+        <item>Statement (small)</item>
+    </string-array>
+
+</resources>

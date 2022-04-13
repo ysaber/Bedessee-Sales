@@ -1,0 +1,79 @@
+buildscript {
+    repositories {
+        maven { url 'http://download.crashlytics.com/maven' }
+    }
+
+    dependencies {
+        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.14.3'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'crashlytics'
+
+repositories {
+    maven { url 'http://download.crashlytics.com/maven' }
+}
+
+android {
+
+    compileSdkVersion 22
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 2015101800
+        versionName "2015101800"
+    }
+
+    flavorDimensions "canada", "usa"
+
+    productFlavors {
+        canada {
+            applicationId "com.thebedesseegroup.sales.canada"
+            dimension "canada"
+        }
+        usa {
+            applicationId "com.thebedesseegroup.sales.usa"
+            dimension "usa"
+        }
+    }
+
+    signingConfigs {
+        canada {
+            keyAlias 'bedessee'
+            keyPassword 'bedessee'
+            storeFile file('/Users/yusufsaber/AndroidStudioProjects/TheBedesseeGroupSalesApp/2015_keystore.jks')
+            storePassword 'bedessee'
+//            dimension "canada"
+        }
+        usa {
+            keyAlias 'bedessee'
+            keyPassword 'bedessee'
+            storeFile file('/Users/yusufsaber/AndroidStudioProjects/TheBedesseeGroupSalesApp/2015_keystore.jks')
+            storePassword 'bedessee'
+//            dimension "usa"
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'com.crashlytics.android:crashlytics:1.1.13'
+    compile 'it.sephiroth.android.library.imagezoom:imagezoom:2.1.1'
+    compile 'com.google.code.gson:gson:2.3'
+    compile project(':FilePicker')
+    compile "com.mixpanel.android:mixpanel-android:4.6.2"
+}

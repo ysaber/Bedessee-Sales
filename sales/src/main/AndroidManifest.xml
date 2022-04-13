@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.thebedesseegroup.sales" >
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_var"
+        tools:replace="android:icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--ACTIVITIES-->
+
+        <activity android:name=".login.Login"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.nononsenseapps.filepicker.FilePickerActivity"
+            android:label="sdf"
+            android:theme="@style/FilePicker.Theme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".main.MainActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape">
+        </activity>
+
+        <activity android:name=".admin.AdminSettings"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape">
+        </activity>
+
+        <activity android:name=".shoppingcart.ShoppingCartDialog"
+                  android:label="@string/shopping_cart_title"
+                  android:screenOrientation="landscape"
+                  android:theme="@style/AppThemeDialog"/>
+
+        <activity android:name=".update.UpdateActivity"
+                  android:screenOrientation="landscape"/>
+
+        <activity android:name=".store.StoreSelector"
+                  android:screenOrientation="landscape"
+                  android:theme="@style/AppThemeDialog"/>
+
+        <activity android:name=".customview.MarginCalculator"
+                  android:screenOrientation="landscape"
+                  android:theme="@style/AppThemeDialog"/>
+
+        <activity android:name=".orderhistory.OrderHistoryActivity"
+                  android:screenOrientation="landscape"
+                  android:theme="@style/AppThemeDialog"/>
+
+        <activity android:name=".store.Statement"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppThemeDialog"/>
+
+        <activity android:name=".sellsheets.SellSheetsDialog"
+                  android:theme="@style/AppThemeDialog"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".product.LargeView" />
+
+
+        <!-- CONTENT PROVIDERS -->
+        <provider
+            android:authorities="${applicationId}.provider"
+            android:name=".provider.Provider"
+            android:exported="false"
+            android:enabled="true"
+            android:syncable="true" />
+
+
+        <!--METADATA-->
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="1535975c325aafaed5996bc610d8fab4bb72e48f"/>
+
+    </application>
+
+
+
+</manifest>

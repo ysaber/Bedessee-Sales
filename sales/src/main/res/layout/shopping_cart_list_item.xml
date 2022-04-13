@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtQty"
+            android:text="4"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:inputType="number"
+            android:enabled="true"
+            android:focusable="false"
+            android:clickable="true"/>
+
+
+        <RadioGroup
+            android:id="@+id/radioType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CASE"
+                android:checked="true"
+                android:enabled="false"/>
+
+            <RadioButton
+                android:id="@+id/radioPiece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PIECE"
+                android:layout_marginLeft="15dp"
+                android:enabled="false"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="WEST INDIAN QUEEN"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="20dp"
+            android:id="@+id/textView_brand" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="CREAM SODA"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:id="@+id/textView_description" />
+
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnRemoveItem"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/ic_cancel" />
+
+</RelativeLayout>
